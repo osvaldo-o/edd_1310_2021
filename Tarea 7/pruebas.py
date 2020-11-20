@@ -1,0 +1,18 @@
+from ListaDoblementeLigada import DoubleLinkedList
+
+x = DoubleLinkedList()
+x.append(10)
+x.append(20)
+x.append(30)
+x.append(40)
+x.transversal()
+print(x.find_from_tail(20))
+print(x.find_from_head(20))
+x.reverse_transversal()
+x.remove_from_tail(10)
+x.transversal()
+x.append(50)
+x.transversal()
+x.remove_from_head(50)
+x.transversal()
+print(x.get_size())
