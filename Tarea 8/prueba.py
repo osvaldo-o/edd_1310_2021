@@ -1,0 +1,18 @@
+from ListasCirculares import CircularList
+
+c = CircularList()
+c.insert(1)
+c.insert(12)
+c.insert(14)
+c.insert(10)
+c.transversal()
+c.remove(10)
+c.transversal()
+c.insert(16)
+c.insert(3)
+c.insert(8)
+c.transversal()
+c.remove(1)
+c.transversal()
+c.remove(16)
+c.transversal()
