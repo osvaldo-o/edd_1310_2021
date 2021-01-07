@@ -2,6 +2,7 @@ from Colas import PriorityQueue
 
 # Provandolo con el ejemplo de la clase
 cola = PriorityQueue()
+print("Provando el enqueue: ")
 cola.enqueue(4, "Maestre")
 cola.enqueue(2, "Niños")
 cola.enqueue(4, "Mecánico")
@@ -12,4 +13,8 @@ cola.enqueue(4, "Timonel")
 cola.enqueue(3, "Mujeres")
 cola.enqueue(2, "3era edad")
 cola.enqueue(1, "Niñas")
+cola.to_string()
+print("Provando el dequeue dos veces: ")
+cola.dequeue()
+cola.dequeue()
 cola.to_string()

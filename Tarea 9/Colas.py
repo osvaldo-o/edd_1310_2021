@@ -1,4 +1,3 @@
-
 class PriorityQueue:
     def __init__( self):
         self.__cola = list()
@@ -9,29 +8,20 @@ class PriorityQueue:
     def length( self):
         return len(self.__cola)
 
-    def enqueue( self, prioridad, valor):
-        if not self.__hay_prioridad__(prioridad):
-            self.__cola.append((prioridad, valor))
-            for i in range(self.length()):
-                pos = i
-                aux = self.__cola[i]
-                while pos > 0 and self.__cola[pos-1] > aux:
-                    self.__cola[pos] = self.__cola[pos-1]
-                    pos-=1
-                self.__cola[pos] = aux
-        else:
-            pos = self.__hay_prioridad__(prioridad)
-            self.__cola.insert(pos, (prioridad, valor))
-
-    def __hay_prioridad__(self, prioridad):
-        pos = 0
-        for elem in self.__cola:
-            if elem[0] > prioridad:
-                return pos
-            pos+=1
-        return False
+    def enqueue( self, prioridad, elem):
+        self.__cola.append((prioridad, elem))
+        for i in range(self.length()):
+            pos = i
+            actual = self.__cola[i]
+            while pos > 0 and self.__cola[pos-1][0] > actual[0]: # ElementoIzq > ElementoActual
+                self.__cola[pos] = self.__cola[pos-1]
+                pos-=1
+            self.__cola[pos] = actual
+    
+    def dequeue( self):
+        return self.__cola.pop(0)
     
     def to_string( self):
         for elem in self.__cola:
-            print(f"|{elem}|-",end="")
-
+            print(f"<-{elem}",end="")
+        print("")
