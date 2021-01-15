@@ -1,0 +1,8 @@
+print("Arbol 1")
+print("1. Prefija: +, -, 5, 4, *, 3, 2")
+print("2. Posfija: 5, 4, -, 3, 2, *, +")
+print("3. Infija: 5, -, 4, +, 3, *, 2")
+print("Arbol 2")
+print("1. Prefija: 40, 30, 25, 35, 50, 45, 60")
+print("2. Posfija: 25, 35, 30, 45, 60, 50, 40")
+print("3. Infija: 25, 30, 35, 40, 45, 50, 60")
